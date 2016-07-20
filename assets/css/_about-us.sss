@@ -1,0 +1,94 @@
+.about-us
+  &__banner
+    background-image: resolve('about-us__banner--small.jpg')
+    background-position: top center
+    @media (--tablet-up)
+      background-image: resolve('about-us__banner.jpg')
+  &__title
+    margin-bottom: var(--spacer--large)
+
+  &__top-image
+    background: resolve('about-us__top-img.png') no-repeat center
+    background-size: cover
+
+
+  &__achivment
+    display: flex
+    flex-flow: column
+    align-items: center
+    justify-content: center
+    margin: auto
+    color: white
+    margin-top: var(--spacer)
+    margin-bottom: var(--spacer)
+    height: 230px
+    width: 266px
+    background: resolve('hexahedron.svg') no-repeat center
+    background-size: contain
+
+    & span
+      font-size: 4.25rem
+      line-height: 1
+    & p
+      margin-bottom: 0
+      font-size: 1.25rem
+
+  &__steps
+    padding-bottom: 0
+
+  & .col-2--flex
+    display: flex
+    margin-bottom: var(--spacer--large)
+
+  &__icon
+    width: 20%
+    margin-right: var(--spacer--small)
+
+    & .icon
+      width: 2rem
+      height: 2rem
+
+    @media(--tablet-up)
+      & .icon
+        width: 3rem
+        height: 3rem
+    @media(--laptop-up)
+      & .icon
+        width: 6rem
+        height: 6rem
+  &__step
+    & .title
+      font-size: 1.4375rem
+      margin-bottom: var(--spacer--small)
+      font-weight: 400
+
+  &__additional
+    padding-top: var(--spacer)
+    padding-bottom: var(--spacer)
+
+    & .container--flex
+      justify-content: space-between
+
+    & .title
+      margin-bottom: var(--spacer)
+      font-weight: 400
+
+  &__img
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    height: 20rem
+    width: 100%
+    margin-bottom: var(--spacer)
+
+    &--1
+      background-image: resolve('about-img__1.jpg')
+    &--2
+      background-image: resolve('about-img__2.jpg')
+    &--3
+      background-image: resolve('about-img__3.jpg')
+
+  &__story
+    & .title
+      font-size: 1.6875rem
+      margin-bottom: var(--spacer)

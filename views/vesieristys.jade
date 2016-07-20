@@ -1,0 +1,86 @@
+extends layout
+
+block meta 
+  meta(name="title", content="Mansen Asfaltti - Vesieristystyöt")
+  meta(name="description", content="Mansen Asfaltti hoitaa asfaltointi- ja kivetystyöt joustavasti!")
+  meta(property='og:title', content='Mansen Asfaltti - Vesieristystyöt')
+  meta(property='og:description', content='Mansen Asfaltti hoitaa asfaltointi- ja kivetystyöt joustavasti!')
+  meta(property='og:type', content='website')
+  meta(property='og:url', content='http://stadinasfaltti.fi/maanrakennus')
+  meta(property='og:image', content='http://stadinasfaltti.fi/img/asfaltti1.jpg')
+
+block title
+  title Mansen Asfaltti - Vesieristystyöt
+
+block content
+  include ./_icons.jade
+  include ./_header.jade
+
+  #main
+    section.section__banner.our-service-page__banner
+
+    section.section
+      .container-flex
+        aside.sidebar.col-1of3
+          h2.title.title__underlined 
+            span PALVELUMME
+          ul.sidebar-nav
+            li.sidebar-nav__item
+              a(href="/asfaltointi") ASFALTOINTITYÖT
+            li.sidebar-nav__item
+              a(href="/kivetys-laatoitus") KIVETYS- JA LAATOITUSTYÖT
+            li.sidebar-nav__item
+              a(href="/maanrakennus") MAANRAKENNUSTYÖT
+            li.sidebar-nav__item
+              a.is-active(href="#") VESIERISTYSTYÖT
+
+        article.our-service-page__article.col-2of3
+          h1.title.text-orange.article__title Vesieristystyöt
+
+          .col-2
+            p.article-first
+              strong Työlajit
+
+            ul
+              li Sokkeleiden eritys
+              li Asfaltti halkeamien puhdistus ja tiivistys
+              li Huopakatot
+              li Pihakansien ja autokansien vesieristystyöt
+              li Siltojen vesieristystyöt
+            
+            a.btn.btn--gray(href="ota-yhteytta") Tee tarjouspyyntö
+
+            
+          //- .col-2
+          //-   p.article-first
+          //-     strong Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+          //- 
+          //-   p labore et dolore magna aliquyam erat, sed diam vo-
+          //-     | luptua. At vero eos et accusam et justo duo dolores et
+          //-     | ea rebum. Stet clita kasd gubergren. no sea takimata
+          //-     | sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+          //-     | dolor sit amet, consetetur sadipscing elitr, sed diam
+          //-     | nonumy eirmod tempor invidunt ut labore et dolore
+          //-     | magna aliquyam erat, sed diam voluptua. At vero eos
+          //-     | et accusam et justo duo dolores et ea rebum. Stet clita
+          //-     | kasd gubergren, no sea takimata sanctus est Lorem
+          //-     | ipsum dolor sit amet.
+          //- 
+          //- .our-service-page__img-block
+          //-   img.our-service-page__img(src="/img/promo.png")
+          //-   p.our-service-page__img-description LOREM IPSUM DOLOR
+          //- 
+          //- h3.subtitle.article__subtitle Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+          //- p labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+          //-   |rebum. Stet clita kasd gubergren. no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+          //-   |amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+          //-   |erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          //-   |takimata sanctus est Lorem ipsum dolor sit amet.
+          //- h3.subtitle.article__subtitle Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+          //- p labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+          //-   |rebum. Stet clita kasd gubergren. no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+          //-   |amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+          //-   |erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          //-   |takimata sanctus est Lorem ipsum dolor sit amet.
+
+  include ./_footer.jade

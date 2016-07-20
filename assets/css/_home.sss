@@ -1,0 +1,86 @@
+.our-service
+  background-color: var(--colorGray--light)
+
+  &__item
+    display: flex
+    align-items: center
+    margin-bottom: var(--spacer)
+
+    @media (--tablet-down)
+      flex-flow: column
+      width: 100%
+
+  &__title
+    color: var(--colorOrange)
+    font-size: 1.44rem
+    margin-bottom: 1rem
+
+  &__title span
+    margin-left: 0 !important;
+
+
+.section-promo
+  & .container
+    position: relative
+  &__triangle
+    position: absolute
+    top: -var(--spacer--large)
+    left: calc(var(--spacer) * 4)
+    height: 0
+    width: 0
+    border-left: var(--spacer--small) solid transparent
+    border-right: var(--spacer--small) solid transparent
+    border-top: var(--spacer--small) solid var(--colorGray--light)
+
+  &__title
+    font-size: 2.69rem
+    text-transform: initial
+    margin-bottom: var(--spacer--small)
+
+    & span
+      display: block
+      margin: 0
+
+  &__buttons
+    display: flex
+
+    & .btn:nth-child(2)
+      margin-left: var(--spacer--small)
+
+.rec-projects
+  &__promo
+    width: 100%
+    height: 340px
+    background: resolve('promo.png') center no-repeat
+    background-size: cover
+    position: relative
+    margin-bottom: var(--spacer)
+
+    @media (--tablet-up)
+      margin: 0 var(--spacer--small) 0 var(--spacer)
+
+
+    &-text
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      color: white
+      height: 60px
+      padding-left: var(--spacer--small)
+      background-color: var(--colorOrange)
+      font-size: 1.44
+      display: flex
+      align-items: center
+
+    &--smaller
+      background-image: resolve('promo-2.png')
+      height: 187px
+    &--small
+      background-image: resolve('promo-3.png')
+      height: 115px
+
+  &__description
+    display: block
+    clear: both
+    padding: var(--spacer)

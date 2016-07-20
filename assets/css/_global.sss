@@ -1,0 +1,26 @@
+
+:root
+
+  --fontColor: #3e3d40
+  --colorOrange: #ff7702
+
+  --colorGray--light: #f9fafa
+  --colorGray--lighter: #808080
+  --colorGray--dark: #1a171b
+
+  --spacer: 40px
+  --spacer--large: 80px
+  --spacer--small: 20px
+  --spacer--tiny: 10px
+
+  --titillium: 'Titillium Web', 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+//@lost flexbox flex;
+@lost gutter 40px;
+
+@custom-media --tablet-up (width >= 767px)
+@custom-media --tablet-down (width < 767px)
+@custom-media --laptop-down (width <= 1024px)
+@custom-media --laptop-up (width > 1024px)
+
+@custom-selector :--enter :hover, :focus

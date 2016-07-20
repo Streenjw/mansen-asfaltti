@@ -1,0 +1,102 @@
+extends layout
+
+block content
+  include ./_icons.jade
+  include ./_header.jade
+  
+  #main
+    section.section__banner.contact-us__banner
+    
+    section.section
+      .container
+        h1.title.title__underlined.text-center.contact-us__title Ota yhteyttä tai 
+          span tee tarjouspyyntö
+        
+        //- p.contact-us__text.text-center labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren. no sea takimata sanctus est 
+        //-   |Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed 
+        //-   |diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    
+    section
+      .container-small
+        .col-2
+
+          form.contact-us__form(action="https://formspree.io/info@stadinasfaltti.fi" method="POST")
+            
+            input#tab1.tab-input(type="radio" checked name="tab") 
+            label.tab-label(for="tab1") Tarjouspyyntö 
+            input#tab2.tab-input(type="radio" name="tab") 
+            label.tab-label(for="tab2") Yhteydenotto
+
+            .tab.Tarjouspyynt
+              label(for="#") Työn tarkoitus
+                select
+                  option Asfaltointityöt
+                  option Kivetys- ja laatoitustyöt
+                  option Maanrakennustyöt
+                  option Vesieristystyöt
+              label(for="#") Työn kohde
+                input(type="text", name="Tyon kohde")
+              label(for="#") Katuosoite
+                input(type="text", name="Katuosoite")
+              label(for="#") Laajuus, noin m2
+                input(type="text", name="Laajuus")
+              label(for="#") Toivottu ajankohta työlle
+                input(type="date", name="Toivottu ajankohta")
+              h3.title Yhteystiedot
+              label(for="#") Yritys/henkilö
+                input(type="text", name="Yritys")
+              label(for="#") Katuosoite
+                input(type="text", name="Katuosoite2")
+              label(for="#") Postinumero
+                input(type="text", name="Postinumero")
+              label(for="#") Postitoimipaikka
+                input(type="text", name="Postitoimipaikka")
+              label(for="#") Puhelinnumero
+                input(type="text", name="Puhelinnumero")
+              label(for="#") Sähköpostiosoite
+                input(type="text", name="Sahkopostiosoite")
+
+            .tab.Yhteydenotto
+              label(for="#") Nimi
+                input(type="text", name="Nimi")
+              label(for="#") Sähköpostiosoite
+                input(type="email", name="_replyto")
+              label(for="#") Viesti
+                textarea(name="Viesti" rows="10")
+              input(type="text" name="_gotcha" style="display:none")
+              input(type="hidden" name="_next" value="http://stadinasfaltti.fi/kiitos")
+              input(type="hidden" name="_subject" value="Viesti Stadin asfaltin websivuilta!")
+            input(type="submit" value="Lähetä")
+        
+        .col-2
+          .col-2
+            h4.title.contact-us__h4 Osoite- ja laskutustiedot
+            
+            p 
+              strong Mansen Asfaltti
+            p Lapintie 5 B 43
+            p 33100
+            p Tampere
+            p Puh. 040-7565901
+            p
+              a(href="http://stadinasfaltti.fi") stadinasfaltti.fi
+            p 
+              a(href="mailto:info@stadin-asfaltti.com") info@stadinasfaltti.fi
+          //- .col-2
+          //-   h4.title.contact-us__h4 SOSIAALINEN MEDIA
+          //-   
+          //-   ul.socials
+          //-     li.social
+          //-       a(href="/").social__link
+          //-         +icon-linkedin
+          //-     li.social
+          //-       a.social__fb
+          //-         +icon-fb
+          //-     li.social
+          //-       a.social__twi
+          //-         +icon-twi
+    
+    section.section-map
+      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127040.96154695668!2d24.899844428672054!3d60.163930135481266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bc796210691%3A0xcd4ebd843be2f763!2z0KXQtdC70YzRgdC40L3QutC4LCDQpNC40L3Qu9GP0L3QtNC40Y8!5e0!3m2!1sru!2sua!4v1467922802873" width="650" height="450" frameborder="0" style="border:0")
+
+  include ./_footer.jade

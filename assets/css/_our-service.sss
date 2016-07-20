@@ -1,0 +1,67 @@
+.our-service-page
+  &__banner
+    background-image: resolve('our-service__banner--small.jpg')
+    @media (--tablet-up)
+      background-image: resolve('our-service__banner.jpg')
+
+  &__img
+
+    &-block
+      margin: var(--spacer) 0
+      position: relative
+      display: inline-block
+
+    &-description
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      color: white
+      height: 60px
+      padding-left: var(--spacer--small)
+      background-color: var(--colorOrange)
+      font-size: 1.44
+      display: flex
+      align-items: center
+      margin-bottom: 0
+
+
+.sidebar
+  &-nav
+    margin: 0
+    padding: 0
+    list-style: none
+    border-bottom: 1px solid var(--fontColor)
+    margin-top: var(--spacer)
+    margin-bottom: var(--spacer)
+
+    &__item
+      border-top: 1px solid var(--fontColor)
+
+      & a
+        border-left: var(--spacer--tiny) solid transparent
+        display: flex
+        height: var(--spacer)
+        align-items: center
+        padding-left: var(--spacer--small)
+        text-transform: uppercase
+
+        &.is-active
+          border-left: var(--spacer--tiny) solid var(--colorOrange)
+
+        &:--enter
+          background-color: rgba(#000, 0.03)
+
+.article
+  &__title
+    font-size: 1.4375rem
+    font-weight: 400
+    margin-bottom: var(--spacer)
+
+  &__subtitle
+    text-transform: initial
+    font-weight: 600
+    margin-bottom: var(--spacer)
+
+  &__first
+    margin-bottom: var(--spacer)

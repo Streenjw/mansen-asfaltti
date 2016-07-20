@@ -1,0 +1,139 @@
+.contact-us
+  &__banner
+    background-image: resolve('contact-us__banner--small.jpg')
+    @media (--tablet-up)
+      background-image: resolve('contact-us__banner.jpg')
+
+  &__form
+    display: flex
+    flex-flow: row wrap
+    margin-bottom: var(--spacer)
+
+    & .title
+      margin-bottom: var(--spacer--small)
+
+    & .tab-input
+      display: none
+
+    & .tab-label
+      display: block
+      float: left
+      padding: 5px 10px
+      cursor: pointer
+      background: white
+      color: var(--fontColor)
+      float: left
+      border-bottom: 3px solid  white
+
+    & .tab-input:checked + .tab-label
+      color: var(--colorOrange)
+      border-bottom-color: currentColor
+      cursor: default
+
+    & .tab
+      display: none
+      clear: left
+      width: 100%
+
+    & .tab-input:nth-of-type(1):checked ~ .tab:nth-of-type(1),
+    & .tab-input:nth-of-type(2):checked ~ .tab:nth-of-type(2)
+      display: block
+
+    & label
+      margin-bottom: var(--spacer)
+      background-color: var(--colorOrange)
+      color: white
+      display: flex
+      padding: var(--spacer--tiny) var(--spacer--small)
+
+
+    & input[type="text"],
+    & input[type="email"],
+    & input[type="date"],
+    & select,
+    & textarea
+      border: 0
+      background: none
+      //width: 60%
+      // padding: 0 var(--spacer--small)
+      padding: 0 var(--spacer--small)
+      margin-left: var(--spacer--small)
+      color: currentColor
+      outline: none
+      position: relative
+      border-bottom: 1px solid transparent
+      box-sizing: border-box
+      flex-grow: 1
+
+      &:focus
+        border-bottom: 1px solid white
+    & textarea
+      clear: both
+      padding-top: 6px
+
+    & option
+      color: var(--fontColor)
+      padding-left: 0
+
+
+    & input[type="submit"]
+      width: 160px
+      height: 50px
+      display: flex
+      align-items: center
+      justify-content: center
+      color: white
+      background: var(--colorOrange)
+      border: 1px solid var(--colorOrange)
+      transition: all 250ms ease
+      position: relative
+      margin-left: auto
+      font-size: 1.05rem
+
+      &:--enter
+        background: white
+        color: var(--colorOrange)
+
+      &:active
+        top: 1px
+
+  &__h4
+    font-weight: 400
+    margin-bottom: var(--spacer--small)
+    font-size: 1.4375rem
+
+.socials
+  padding: 0
+  margin: 0
+  list-style: none
+  display: flex
+  justify-content: center
+
+  @media(--tablet-up)
+    justify-content: flex-start
+
+.social
+  margin-right: var(--spacer--small)
+
+  & a
+    background: var(--colorOrange)
+    display: flex
+    padding: 4px
+    line-height: 1
+
+    & .icon
+      fill: white
+      width: 1rem
+      height: 1rem
+      margin: auto
+
+.section-map iframe
+  width: 100%
+  height: 250px
+  line-height: 0
+  float: left
+
+  @media (--tablet-up)
+    height: 350px
+  @media (--laptop-up)
+    height: 450px

@@ -1,0 +1,29 @@
+.header
+  background-color: var(--colorGray--light)
+  height: 50px
+
+  @media(--laptop-up)
+    height: 71px
+
+  &-wrap
+    padding: 0 var(--spacer--small)
+    justify-content: space-between
+
+    @media(--laptop-up)
+      padding: 0
+
+.logo
+  background: resolve('logo.png') no-repeat top left
+  background-size: contain
+  width: 120px
+  height: 89px
+  margin-bottom: calc(-89px + 50px)
+  display: block
+  float: left
+  position: relative
+  z-index: 10
+
+  @media(--laptop-up)
+    height: 124px
+    width: 171px
+    margin-bottom: calc(-124px + 71px)

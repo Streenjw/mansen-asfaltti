@@ -1,0 +1,134 @@
+extends layout
+block meta 
+  meta(name="title", content="Mansen Asfaltti - Kotisivu")
+  meta(name="description", content="Mansen Asfaltti hoitaa asfaltointi- ja kivetystyöt joustavasti!")
+  meta(property='og:title', content='Mansen Asfaltti - Kotisivu')
+  meta(property='og:description', content='Mansen Asfaltti hoitaa asfaltointi- ja kivetystyöt joustavasti!')
+  meta(property='og:type', content='website')
+  meta(property='og:url', content='http://stadinasfaltti.fi/')
+  meta(property='og:image', content='http://stadinasfaltti.fi/img/slide1.png')
+block title
+  title Mansen Asfaltti - Kotisivu
+
+block content
+  include ./_icons.jade
+  include ./_header.jade
+
+  main#main
+    section.slider-section
+
+      .slider.js_slider
+        .slider__wrapper.js_frame
+          ul.slides.js_slides
+            li.js_slide.slide
+              .container
+                .slide__content
+                  h3.slide__title.title Aito manselainen
+                    span asfaltointiliike
+                    .footer__partner.footer__partner--1
+                  //- p.slide__text Lorem ipsum dolor sit amet, consetetur sadipscing
+                  //- |elitr, sed diam nonumy eirmod tempor invidunt ut
+                  //- |labore et dolore magna ali
+                  //- a.btn.btn--orange(href="#") Read more
+            //- li.js_slide.slide
+            //-   .container
+            //-     .slide__content
+            //-       h3.slide__title.title Idit doluptas nis quia
+            //-         span voluptat doluptate
+            //-       p.slide__text Lorem ipsum dolor sit amet, consetetur sadipscing
+            //-         |elitr, sed diam nonumy eirmod tempor invidunt ut
+            //-         |labore et dolore magna ali
+            //-       a.btn.btn--orange(href="#") Read more
+
+        //- .slider__control
+        //-   .js_next.next
+        //-     +icon-angle-left
+        //-   .js_prev.prev
+        //-     +icon-angle-right
+
+    section.section.our-service
+      .container
+        h2.title.section__title.title__underlined 
+          span Palvelumme
+
+        .col-2.our-service__item
+          img.our-service__image.col-2(src="/img/service-1.png")
+          .our-service__info.col-2
+            h4.title.our-service__title
+              span ASFALTOINTITYÖT
+            //- p.our-service__text prem si dolliberiate restectur, ut esto to
+            //-   |dest atet as aut velia di omnime et untem.
+            a.btn.btn--gray(href="/asfaltointi") Lue lisää
+        .col-2.our-service__item
+          img.our-service__image.col-2(src="/img/service-3.png")
+          .our-service__info.col-2
+            h4.title.our-service__title
+              span KIVETYS- JA LAATOITUSTYÖT
+            //- p.our-service__text prem si dolliberiate restectur, ut esto to
+            //-   |dest atet as aut velia di omnime et untem.
+            a.btn.btn--gray(href="/kivetys-laatoitus") Lue lisää
+        .col-2.our-service__item
+          .our-service__info.col-2
+            h4.title.our-service__title
+              span MAANRAKENNUSTYÖT
+            //- p.our-service__text prem si dolliberiate restectur, ut esto to
+            //-   |dest atet as aut velia di omnime et untem.
+            a.btn.btn--gray(href="/maanrakennus") Lue lisää
+          img.our-service__image.col-2(src="/img/service-2.png")
+        .col-2.our-service__item
+          .our-service__info.col-2
+            h4.title.our-service__title
+              span VESIERISTYSTYÖT
+            //- p.our-service__text prem si dolliberiate restectur, ut esto to
+            //-   |dest atet as aut velia di omnime et untem.
+            a.btn.btn--gray(href="/vesieristys") Lue lisää
+          img.our-service__image.col-2(src="/img/service-4.png")
+
+    //- section.section.section--orange.section-promo
+    //-   .container
+    //-     .section-promo__triangle
+    //-     .col-2of5
+    //-       h3.title.section-promo__title Idit doluptas nis quia
+    //-         span voluptat doluptate
+    //-       .section-promo__buttons
+    //-         a.btn.btn__white(href="#") Lue lisää
+    //-         a.btn.btn__white-fill(href="#") Contact Us
+    //-     .col-3of5
+    //-       p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+    //-         |labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+    //-         |et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum.
+    //-       p dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+    //-         |tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+    //-         |justo duo.
+
+    //- section.section.rec-projects
+    //-   .container
+    //-     h2.title.section__title.title__underlined VIIMEISIMPIÄ
+    //-       span PROJEKTEJAMME
+    //- 
+    //-     .col-2
+    //-       .rec-projects__promo
+    //-         .rec-projects__promo-text LOREM IPSUM DOLOR
+    //- 
+    //-     .col-2
+    //-       .rec-projects__img-block
+    //-         .rec-projects__img-block--left.col-3of5
+    //-           .rec-projects__promo.rec-projects__promo--smaller
+    //-           //- ul.dots-nav
+    //-           //-   li.dot-nav.active
+    //-           //-     span
+    //-           //-   li.dot-nav
+    //-           //-     span
+    //-           //-   li.dot-nav
+    //-           //-     span
+    //-           //-   li.dot-nav
+    //-           //-     span
+    //- 
+    //-         .rec-projects__img-block--right.col-2of5
+    //-           .rec-projects__promo.rec-projects__promo--small
+    //-       .rec-projects__description
+    //-         p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+    //-           |nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+    //-           |erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.
+
+  include ./_footer.jade

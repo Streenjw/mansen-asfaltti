@@ -1,0 +1,103 @@
+extends layout
+
+block meta 
+  meta(name="title", content="Mansen Asfaltti - Referenssit")
+  meta(name="description", content="Mansen Asfaltti hoitaa asfaltointi- ja kivetystyöt joustavasti!")
+  meta(property='og:title', content='Mansen Asfaltti - Referenssit')
+  meta(property='og:description', content='Mansen Asfaltti hoitaa asfaltointi- ja kivetystyöt joustavasti!')
+  meta(property='og:type', content='website')
+  meta(property='og:url', content='http://stadinasfaltti.fi/referenssit')
+  meta(property='og:image', content='http://stadinasfaltti.fi/img/asfaltti1.jpg')
+
+block title
+  title Mansen Asfaltti - Referenssit
+
+block content
+  include ./_icons.jade
+  include ./_header.jade
+  
+  #main
+    section.section__banner.references__banner
+    
+    section.section
+      .container
+        h1.title.title__underlined.text-center.references__title Meidän
+          span REFERENSSIMME
+        
+        .reference-item
+          .reference-item__logo.col-1of4
+            img(src="/img/reference/asiakas_s-ryhma.png")
+          .reference-item__content.col-3of4
+            .reference-item__top
+              .reference-item__name.reference-item__top-flex
+                +icon-name
+                |Päällysteiden paikkausurakka
+              .reference-item__place.reference-item__top-flex 
+                +icon-map
+                |S-Ryhmä
+              .reference-item__date.reference-item__top-flex
+                +icon-calendar
+                | 2016
+            .reference-item__text
+              //- p labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea 
+              //-   |rebum. Stet clita kasd gubergren. no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit 
+              //-   |amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+          
+        .reference-item
+          .reference-item__logo.col-1of4
+            img(src="/img/reference/asiakas_aberdeen.png")
+          .reference-item__content.col-3of4
+            .reference-item__top
+              .reference-item__name.reference-item__top-flex
+                +icon-name
+                |Päällysteiden paikkausurakka
+              .reference-item__place.reference-item__top-flex 
+                +icon-map
+                |Aberdeen Asset Management
+              .reference-item__date.reference-item__top-flex
+                +icon-calendar
+                | 2016
+            .reference-item__text
+              //- p labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea 
+              //-   |rebum. Stet clita kasd gubergren. no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit 
+              //-   |amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+          
+        .reference-item
+          .reference-item__logo.col-1of4
+            img(src="/img/reference/asiakas_newsec.png")
+          .reference-item__content.col-3of4
+            .reference-item__top
+              .reference-item__name.reference-item__top-flex
+                +icon-name
+                |Päällysteiden paikkausurakka
+              .reference-item__place.reference-item__top-flex 
+                +icon-map
+                |Newsec
+              .reference-item__date.reference-item__top-flex
+                +icon-calendar
+                | 2016
+            .reference-item__text
+              //- p labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea 
+              //-   |rebum. Stet clita kasd gubergren. no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit 
+              //-   |amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+          
+        .reference-item
+          .reference-item__logo.col-1of4
+            img(src="/img/reference/asiakas_corbel.png")
+          .reference-item__content.col-3of4
+            .reference-item__top
+              .reference-item__name.reference-item__top-flex
+                +icon-name
+                |Päällysteiden paikkausurakka
+              .reference-item__place.reference-item__top-flex 
+                +icon-map
+                |Corbel
+              .reference-item__date.reference-item__top-flex
+                +icon-calendar
+                | 2016
+            .reference-item__text
+              //- p labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea 
+              //-   |rebum. Stet clita kasd gubergren. no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit 
+              //-   |amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+          
+  include ./_footer.jade

@@ -1,0 +1,29 @@
+extends layout
+
+block meta 
+  meta(name="title", content="Mansen Asfaltti - Kiitos")
+  meta(name="description", content="Mansen Asfaltti hoitaa asfaltointi- ja kivetystyöt joustavasti!")
+  meta(property='og:title', content='Mansen Asfaltti - Kiitos')
+  meta(property='og:description', content='Mansen Asfaltti hoitaa asfaltointi- ja kivetystyöt joustavasti!')
+  meta(property='og:type', content='website')
+  meta(property='og:url', content='http://stadinasfaltti.fi/asfaltointi')
+  meta(property='og:image', content='http://stadinasfaltti.fi/img/asfaltti1.jpg')
+
+block title
+  title Mansen Asfaltti - Kiitos
+  
+block content
+  include ./_icons.jade
+  include ./_header.jade
+
+  #main
+    section.section__banner.our-service-page__banner
+
+    section.section
+      .container-flex
+        h1.title.title__underlined.text-center.about-us__title Kiitos
+          span yhteydenotostasi!
+        
+        a.btn.btn--gray.btn--center(href="/") Takaisin etusivulle
+
+  include ./_footer.jade

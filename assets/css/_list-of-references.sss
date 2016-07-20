@@ -1,0 +1,66 @@
+.references
+  &__banner
+    background-image: resolve('reference--small.jpg')
+    @media (--tablet-up)
+      background-image: resolve('reference.jpg')
+  &__title
+    margin-bottom: var(--spacer--large)
+
+.reference-item
+  display: flex
+  padding: var(--spacer--small)
+  flex-direction: column
+
+  @media (--tablet-up)
+    flex-direction: row
+
+  &:nth-child(2n)
+    background-color: var(--colorGray--light)
+
+  &__logo
+    display: flex
+
+    & img
+      margin: auto
+  &__top
+    display: flex
+    font-weight: 600
+    line-height: 1
+    margin-bottom: var(--spacer--small)
+    flex-direction: column
+
+    @media (--laptop-up)
+      flex-direction: row
+
+    & .icon
+      height: var(--spacer)
+      margin-right: var(--spacer--small)
+      @media (--laptop-up)
+        width: var(--spacer)
+        margin: 0 var(--spacer--small)
+
+    &-flex
+      display: flex
+      align-items: center
+
+  &__name
+    @media (--laptop-up)
+      width: 45%
+
+    & .icon
+      margin-left: 0
+
+  &__place
+    padding-right: var(--spacer--small)
+    border-top: 1px solid var(--fontColor)
+    border-bottom: 1px solid var(--fontColor)
+    @media (--laptop-up)
+      width: 40%
+      border-left: 1px solid var(--fontColor)
+      border-right: 1px solid var(--fontColor)
+      border-top: 0
+      border-bottom: 0
+
+  &__date
+    @media (--laptop-up)
+      width: 15%

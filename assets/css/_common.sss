@@ -1,0 +1,144 @@
+body
+  padding: 0
+  margin: 0
+  font-family: var(--titillium)
+  font-size: 12px
+  line-height: 1.66
+  color: var(--fontColor)
+
+  @media (--tablet-up)
+    font-size: 14px
+  @media (--laptop-up)
+    font-size: 16px
+
+a
+  transition: color 250ms ease-in-out
+  color: currentColor
+  text-decoration: none
+
+  &:--enter
+    color: var(--colorOrange)
+
+p
+  margin-top: 0
+
+h1,h2,h3,h4,h5,h6,.title
+  font-weight: 200
+  text-transform: uppercase
+  text-align: center
+  margin: 0
+  width: 100%
+  line-height: 1
+
+  & span
+    font-weight: 600
+    margin-left: 0.4rem
+
+  @media (--tablet-up)
+    text-align: initial
+img
+  max-width: 100%
+
+.title__underlined span
+  position: relative
+  margin-left: 8px
+  font-weight: 600
+
+  &::after
+    content: " "
+    display: block
+    width: 47px
+    height: 2px
+    background-color: var(--colorOrange)
+    position: absolute
+    left: 0
+    bottom: 0px
+
+.btn
+  display: inline-block
+  border: 0px
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 40px
+  width: 128px
+  border-width: 1px
+  border-style: solid
+  transition: all 250ms ease-in-out
+
+  &:--enter
+    color: var(--colorOrange)
+    background-color: white
+
+  &--orange
+    color: white
+    background-color: var(--colorOrange)
+    border-color: var(--colorOrange)
+
+  &--center
+    margin: 0 auto
+
+    &:--enter
+      background-color: white
+      color: orange
+  &--gray
+    background-color: var(--fontColor)
+    border-color: var(--fontColor)
+    color: white
+
+    &:--enter
+      background-color: var(--colorOrange)
+      color: white
+      border-color: var(--colorOrange)
+
+  &__white-fill
+    background-color: white
+    color: var(--colorOrange)
+
+    &:--enter
+      background-color: rgba(#fff, 0.8)
+
+
+.section
+  padding: var(--spacer) 0
+  @media (--laptop-up)
+    padding: var(--spacer--large) 0
+
+  &--orange
+    background-color: var(--colorOrange)
+    color: white
+
+  &__title
+    text-align: center
+    margin-bottom: var(--spacer--large)
+    font-size: 27px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    line-height: 1.3
+
+  &__banner
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    height: 50vh
+    @media (--laptop-up)
+      height: 70vh
+
+  &__gray
+    background-color: var(--colorGray--light)
+
+.text-orange
+  color: var(--colorOrange)
+
+.text-center
+  text-align: center
+
+.icon
+  display: inline-block
+  width: 1em
+  height: 1em
+  stroke-width: 0
+  stroke: currentColor
+  fill: currentColor
+  color: var(--colorOrange)

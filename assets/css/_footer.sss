@@ -1,0 +1,111 @@
+.scroll-top
+  position: absolute
+  bottom: 100%
+  left: 0
+  display: flex
+  width: 2.5rem
+  height: 2.5rem
+  background-color: var(--colorOrange)
+  border: 1px solid var(--colorOrange)
+  transition: all 250ms ease-in-out
+  cursor: pointer
+
+  & .icon
+    fill: white
+    width: 2rem
+    height: 2rem
+    margin: auto
+  &:--enter
+    background-color: white
+
+    & .icon
+      fill: var(--colorOrange)
+
+
+.footer
+  background-color: var(--fontColor)
+  color: white
+  position: relative
+  text-align: center
+
+  @media (--tablet-up)
+    text-align: initial
+
+  &::after
+    content: " "
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    height: var(--spacer--large)
+    background-color: var(--colorGray--lighter)
+    z-index: 1
+
+  & .container
+    position: relative
+    z-index: 2
+
+  &__title
+    font-size: 1.25rem
+    line-height: var(--spacer--large)
+    margin-bottom: var(--spacer--small)
+    position: relative
+
+    &--only-bold span
+      margin-left: 0
+
+    @media (--laptop-up)
+      margin-bottom: var(--spacer)
+      &::after
+        content: " "
+        display: block
+        position: absolute
+        top: 100%
+        left: calc(var(--spacer) * 1.5)
+        height: 0
+        width: 0
+        border-left: var(--spacer--tiny) solid transparent
+        border-right: var(--spacer--tiny) solid transparent
+        border-top: var(--spacer--tiny) solid var(--colorGray--lighter)
+
+
+  &__partners
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+
+  &__partner
+    width: 45%
+    height: 80px
+    background-position: left center
+    background-size: contain
+    background-repeat: no-repeat
+
+    &--1
+      background-image: resolve('tilaajavastuu.png')
+    &--2
+      background-image: resolve('partner_icopal.jpg')
+    &--3
+      background-image: resolve('partner_lemminkainen.png')
+    &--4
+      background-image: resolve('partner_kerabit.jpg')
+    &--5
+      background-image: resolve('partner_asfalttikallio.jpg')
+    // &--6
+    //   background-image: resolve('32.png')
+
+  &__bottom
+    height: var(--spacer--large)
+    display: flex
+    flex-flow: column
+    align-items: center
+    justify-content: center
+    background-color: var(--colorGray--dark)
+    margin-top: var(--spacer--large)
+
+    & a
+      margin: 0 0.5rem
+
+    @media (--tablet-up)
+      flex-flow: row

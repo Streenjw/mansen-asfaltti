@@ -1,0 +1,98 @@
+.nav
+  list-style: none
+  padding: 0
+  margin: 0
+  fill: currentColor
+  font-size: 16px
+
+
+  @media (--laptop-down)
+    color: white
+    padding: 70px 0 0 0
+    background: var(--colorOrange)
+    z-index: 500
+    position: fixed
+    top: 0
+    bottom: 0
+    right: -5px
+    left: 100%
+    transition: left 500ms ease-out-expo
+
+    &.active
+      left: 30vw
+
+  @media (--laptop-up)
+    display: flex
+
+  &-main
+    text-transform: uppercase
+    align-items: center
+  &-item
+    padding: 0 var(--spacer--small)
+    border-right: 1px solid currentColor
+    display: block
+
+  &-item:last-child
+    border-right: 0
+
+    &--search
+      border: 0
+
+  & .icon
+    fill: currentColor
+
+  &-sub-menu
+    margin: 0
+    padding-left: 1rem
+
+    & li 
+      padding-left: 0
+      font-size: 0.85rem
+      border: 0
+
+#nav-toggle
+  position: relative
+  width: 50px
+  height: 50px
+  z-index: 1000
+  @media (--laptop-up)
+    display: none
+
+  & span
+    top: calc(50% - 1px)
+
+  & span,
+  & span:before,
+  & span:after
+    cursor: pointer
+    border-radius: 1px
+    height: 2px
+    width: 24px
+    background: var(--fontColor)
+    position: absolute
+    right: 0
+    display: block
+    content: " "
+    transition: all 250ms ease-in-out
+
+  & span:before
+    top: -6px
+
+  & span:after
+    bottom: -6px
+
+  &.active span
+    background-color: transparent
+
+  &.active span:before,
+  &.active span:after
+    top: 0
+
+  &.active span:before
+    transform: rotate(45deg)
+    background: white
+
+  &.active span:after
+    transform: translateY(-10px) rotate(-45deg)
+    top: 10px
+    background: white

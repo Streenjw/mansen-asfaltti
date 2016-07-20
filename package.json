@@ -1,0 +1,54 @@
+{
+  "name": "asphalt",
+  "description": "",
+  "version": "0.0.1",
+  "author": "",
+  "ava": {
+    "verbose": "true"
+  },
+  "bugs": "https://github.com//teho-opisto/issues",
+  "dependencies": {
+    "Astro": "github:cferdinandi/astro",
+    "Drop": "github:cferdinandi/drop",
+    "babel-preset-es2015": "6.x",
+    "babel-preset-stage-2": "6.x",
+    "cssnano": "3.x",
+    "image-webpack-loader": "1.x",
+    "lory.js": "^2.1.0",
+    "lost": "6.x",
+    "postcss-assets": "^4.1.0",
+    "postcss-cssnext": "2.6.x",
+    "postcss-font-magician": "^1.4.0",
+    "postcss-import": "8.x",
+    "postcss-mixins": "^4.0.2",
+    "posthtml-jade": "0.8.x",
+    "posthtml-md": "1.x",
+    "posthtml-minifier": "0.1.x",
+    "posthtml-retext": "0.1.x",
+    "retext-smartypants": "1.x",
+    "rucksack-css": "0.8.x",
+    "smooth-scroll": "github:cferdinandi/smooth-scroll",
+    "spike": "^0.9.0",
+    "spike-pushstate": "^0.2.0",
+    "sugarss": "0.1.x",
+    "svgxuse": "^1.1.17",
+    "webpack": "1.13.x"
+  },
+  "devDependencies": {
+    "ava": "0.15.x",
+    "rimraf": "2.5.x",
+    "snazzy": "4.x",
+    "spike-core": "0.6.x",
+    "standard": "7.x"
+  },
+  "homepage": "https://github.com//teho-opisto",
+  "main": "app.js",
+  "private": "true",
+  "repository": "https://github.com//teho-opisto",
+  "scripts": {
+    "lint": "standard --verbose | snazzy",
+    "precommit": "npm run lint -s",
+    "pretest": "npm run lint -s",
+    "test": "NODE_ENV=test ava"
+  }
+}

@@ -1,0 +1,112 @@
+/**
+* (optional) define here the style definitions which should be applied on the slider container
+* e.g. width including further controls like arrows etc.
+*/
+
+.slider
+  position: relative
+.slider__wrapper
+  width: 100%
+
+  position: relative
+  font-size: 0
+  line-height: 0
+  overflow: hidden
+  white-space: nowrap
+
+.slides
+  display: block
+  text-align: center
+  width: 100%
+  white-space: wrap
+
+  & li
+    position: relative
+    display: inline-block
+    width: 100%
+    font-size: 1rem
+    line-height: 1.5
+    white-space: initial
+    text-align: left
+/* lory style end */
+
+
+.slides
+  margin: 0
+  padding: 0
+
+.slide
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  background-image: resolve('slide1.png')
+  height: calc(100vh - 50px)
+
+  @media (--tablet-up)
+    max-height: 750px
+
+  & .container
+    height: 100%
+    display: flex
+
+  &__content
+    margin: auto
+    width: 370px
+    color: white
+
+    @media (--tablet-up)
+      margin: auto 0
+      padding-left: 50px;
+
+      & p
+        margin-bottom: var(--spacer)
+
+  &__title
+    display: flex
+    flex-flow: column
+    color: white
+    text-transform: initial
+    font-weight: lighter
+    font-size: 2.6875rem
+    text-align: left
+    & span
+      color: var(--colorOrange)
+      font-weight: 600
+
+    @media (--tablet-up)
+      margin-bottom: var(--spacer)
+
+.slider__control
+  & .next,
+  & .prev
+    position: absolute;
+    bottom: 0
+
+
+    & .icon
+      width: 2rem
+      height: 2rem
+      border: 2px solid currentColor
+
+      &:--enter
+        color: white
+
+    @media(--laptop-up)
+      top: calc(50% - 1.875rem)
+      bottom: auto
+      & .icon
+        width: 3.75rem
+        height: 3.75rem
+
+
+
+
+  & .prev
+    right: var(--spacer--tiny)
+    @media (--tablet-up)
+      right: var(--spacer)
+
+  & .next
+    left: var(--spacer--tiny)
+    @media (--tablet-up)
+      left: var(--spacer)
