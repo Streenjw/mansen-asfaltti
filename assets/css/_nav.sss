@@ -3,8 +3,7 @@
   padding: 0
   margin: 0
   fill: currentColor
-  font-size: 16px
-
+  font-size: 1rem
 
   @media (--laptop-down)
     color: white
@@ -32,6 +31,9 @@
     border-right: 1px solid currentColor
     display: block
 
+    @media (width >= 767px) and (width <= 1024px)
+      font-size: 1.7rem;
+
   &-item:last-child
     border-right: 0
 
@@ -45,10 +47,13 @@
     margin: 0
     padding-left: 1rem
 
-    & li 
+    & li
       padding-left: 0
       font-size: 0.85rem
       border: 0
+
+      @media (width >= 767px) and (width <= 1024px)
+        font-size: 1.3rem
 
 #nav-toggle
   position: relative
