@@ -28,7 +28,7 @@
     "retext-smartypants": "1.x",
     "rucksack-css": "0.8.x",
     "smooth-scroll": "github:cferdinandi/smooth-scroll",
-    "spike": "^0.9.0",
+    "spike": "^0.8.0",
     "spike-pushstate": "^0.2.0",
     "sugarss": "0.1.x",
     "svgxuse": "^1.1.17",
@@ -38,7 +38,7 @@
     "ava": "0.15.x",
     "rimraf": "2.5.x",
     "snazzy": "4.x",
-    "spike-core": "0.6.x",
+    "spike-core": "0.8.x",
     "standard": "7.x"
   },
   "homepage": "https://github.com//teho-opisto",
